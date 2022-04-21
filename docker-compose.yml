@@ -1,0 +1,16 @@
+version: "3.4"
+services:
+  handshake.public.dappnode.eth:
+    build:
+      context: .
+      args:
+        UPSTREAM_VERSION: v3.0.1
+    image: "handshake.public.dappnode.eth:0.1.0"
+    restart: unless-stopped
+    command: "--chain-migrate=2 --wallet-migrate=1"
+    volumes:
+      - "handshake_data:/root/.hsd"
+    ports:
+      - "12037:12037"
+volumes:
+  handshake_data: {}

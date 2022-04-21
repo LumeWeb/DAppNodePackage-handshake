@@ -1,0 +1,21 @@
+{
+  "name": "handshake.public.dappnode.eth",
+  "version": "0.1.0",
+  "upstreamRepo": "handshake-org/hsd",
+  "upstreamArg": "UPSTREAM_VERSION",
+  "shortDescription": "Blockchain node for handshake",
+  "description": "Blockchain node for Handshake",
+  "type": "service",
+  "chain": "bitcoin",
+  "author": "Lume Web",
+  "categories": [
+    "Blockchain"
+  ],
+  "links": {
+    "homepage": "https://github.com/LumeWeb/DAppNodePackage-handshake"
+  },
+  "bugs": {
+    "url": "https://github.com/LumeWeb/DAppNodePackage-handshake/issues"
+  },
+  "license": "MIT"
+}
