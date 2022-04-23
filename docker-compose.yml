@@ -7,10 +7,17 @@ services:
         UPSTREAM_VERSION: v3.0.1
     image: "handshake.public.dappnode.eth:0.1.0"
     restart: unless-stopped
-    command: "--chain-migrate=2 --wallet-migrate=1"
+    command: >-
+      --http-host=0.0.0.0
+      --no-wallet
     volumes:
       - "handshake_data:/root/.hsd"
-    ports:
-      - "12037:12037"
+    expose:
+      - 12037
+    environment:
+      - HSD_API_KEY=dappnode
+      - HSD_HTTP_PORT=12037
+      - HSD_PRUNE=0
+      - HSD_INDEX_TX=0
 volumes:
   handshake_data: {}
