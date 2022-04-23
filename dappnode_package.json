@@ -6,7 +6,7 @@
   "shortDescription": "Blockchain node for handshake",
   "description": "Blockchain node for Handshake",
   "type": "service",
-  "chain": "bitcoin",
+  "chain": "handshake",
   "author": "Lume Web",
   "categories": [
     "Blockchain"
