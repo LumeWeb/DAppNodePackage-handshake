@@ -2,18 +2,18 @@ version: "3.4"
 services:
   handshake.public.dappnode.eth:
     build:
-      context: .
+      context: build
       args:
         UPSTREAM_VERSION: v3.0.1
     image: "handshake.public.dappnode.eth:0.1.0"
     restart: unless-stopped
-    command: >-
-      --http-host=0.0.0.0
-      --no-wallet
     volumes:
       - "handshake_data:/root/.hsd"
     expose:
       - 12037
+    ports:
+      - "12038:12038"
+      - "44806:44806"
     environment:
       - HSD_API_KEY=dappnode
       - HSD_HTTP_PORT=12037

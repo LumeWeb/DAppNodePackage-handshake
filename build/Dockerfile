@@ -14,4 +14,6 @@ WORKDIR /usr/local/hsd
 
 RUN npm install --production
 
-ENTRYPOINT ["hsd"]
+ADD bin/docker_entrypoint.sh /
+
+ENTRYPOINT ["/docker_entrypoint.sh"]
